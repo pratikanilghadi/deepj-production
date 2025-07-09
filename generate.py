@@ -18,7 +18,7 @@ class Generation():
     Represents a music generation sequence
     """
 
-    def __init__(self, model, style=None, default_temp=1, beam_size=1, adaptive=False):
+    def __init__(self, model, style=None, default_temp=0.9, beam_size=1, adaptive=False):
         self.model = model
 
         self.beam_size = beam_size

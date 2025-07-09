@@ -43,4 +43,4 @@ settings = {
     'force_cpu': False
 }
 
-MODEL_PATH = 'models/v1/model.pt'
+MODEL_PATH = 'models/v2/model.pt'
