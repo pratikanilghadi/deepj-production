@@ -24,6 +24,7 @@ class ProcessingRequest(APIBaseModel):
     user_id: str
     input_file_url: HttpUrl
     output_file_url: HttpUrl
+    style: str
     processing_type: Literal["MELODYGEN"]
     metadata: RequestMetadata
 

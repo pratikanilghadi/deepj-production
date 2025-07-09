@@ -137,17 +137,16 @@ def load_midi(fname):
         np.save(cache_path, seq)
     return seq
 
-def save_midi(fname, event_seq):
+def save_midi(fname, event_seq, file_path):
     """
     Takes a list of all notes generated per track and writes it to file
     """
-    os.makedirs(SAMPLES_DIR, exist_ok=True)
-    fpath = SAMPLES_DIR + '/' + fname + '.mid'
+    fpath = file_path + '/' + fname + '.mid'
     midi_file = seq_to_midi(event_seq)
     print('Writing file', fpath)
     midi_file.save(fpath)
     
-def save_midi_file(file, event_seq):
+def save_midi_file(file, event_seq, file_path):
     """
     Takes a list of all notes generated per track and writes it to file
     """

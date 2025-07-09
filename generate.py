@@ -95,12 +95,12 @@ class Generation():
         best_seq = best[1]
         return np.array(best_seq)
 
-    def export(self, name='output', seq_len=1000, show_progress=True):
+    def export(self, name='output', seq_len=1000, show_progress=True, file_path="out/samples"):
         """
         Export into a MIDI file.
         """
         seq = self.generate(seq_len, show_progress=show_progress)
-        save_midi(name, seq)
+        save_midi(name, seq, file_path)
 
 def main():
     parser = argparse.ArgumentParser(description='Generates music.')
